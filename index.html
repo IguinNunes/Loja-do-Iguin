@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Loja do Iguin</title>
-  <meta name="description" content="Produtos afiliados do Mercado Livre com qualidade, recomendações e atendimento em tempo real por chatbot. Conheça os achadinhos do Igor Nunes!" />
+  <meta name="description" content="Produtos afiliados do Mercado Livre com qualidade e atendimento em tempo real por chatbot. Confira os achadinhos do Igor Nunes!" />
   <meta name="keywords" content="Mercado Livre, afiliado, produtos, eletrônicos, ofertas, Loja do Iguin" />
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background-color: #f5f5f5; }
@@ -12,7 +12,6 @@
     header h1 { margin: 0; color: #333; }
     nav a { margin: 0.5rem; color: #333; text-decoration: none; font-weight: bold; }
     main { padding: 2rem; }
-    .categoria { font-size: 1.2rem; margin: 1.5rem 0 1rem; color: #333; }
     .produto { background: white; border-radius: 8px; padding: 1rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
     .produto img { width: 100%; border-radius: 8px; }
     .produto h2 { font-size: 1.2rem; color: #222; }
@@ -20,15 +19,12 @@
     .preco { font-size: 1.2rem; color: green; margin: 0.5rem 0; }
     .botao-compra { background: #3483fa; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block; }
     footer { background: #333; color: white; padding: 2rem; text-align: center; }
-    #chat-container { position: fixed; bottom: 20px; right: 20px; width: 300px; background: white; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+    #chat-toggle { position: fixed; bottom: 20px; right: 20px; background: #3483fa; color: white; padding: 10px 15px; border: none; border-radius: 50%; font-size: 18px; }
+    #chat-container { display: none; position: fixed; bottom: 80px; right: 20px; width: 300px; background: white; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
     #chat-messages { max-height: 200px; overflow-y: auto; padding: 10px; }
     #chat-input { display: flex; border-top: 1px solid #ddd; }
     #chat-input input { flex: 1; border: none; padding: 10px; }
     #chat-input button { background: #3483fa; border: none; color: white; padding: 10px 15px; }
-    @media (max-width: 600px) {
-      .produto { padding: 1rem 0.5rem; }
-      header, footer { text-align: center; flex-direction: column; }
-    }
   </style>
 </head>
 <body>
@@ -42,23 +38,87 @@
     </nav>
   </header>
   <main>
-    <h2 class="categoria" id="eletronicos">Eletrônicos</h2>
+    <h2>Produtos em destaque</h2>
+
     <div class="produto">
-      <img src="imagens/headset_anc.webp" alt="Headset Bluetooth">
+      <img src="imagens/monitor_samsung.webp" alt="Monitor Gamer Samsung 24” Full HD">
+      <h2>Monitor Gamer Samsung 24” Full HD</h2>
+      <p>Produto de alta qualidade, ideal para quem busca desempenho e custo-benefício.</p>
+      <p class="preco">Preço especial via afiliado</p>
+      <a class="botao-compra" href="https://mercadolivre.com/sec/2Y6isgE" target="_blank">Comprar agora</a>
+    </div>
+    
+    <div class="produto">
+      <img src="imagens/headset_anc.webp" alt="Headset Bluetooth com ANC">
       <h2>Headset Bluetooth com ANC</h2>
-      <p>Som imersivo e cancelamento de ruído para seu conforto.</p>
-      <p class="preco">R$ 199,90</p>
+      <p>Produto de alta qualidade, ideal para quem busca desempenho e custo-benefício.</p>
+      <p class="preco">Preço especial via afiliado</p>
       <a class="botao-compra" href="https://mercadolivre.com/sec/1bEUvw1" target="_blank">Comprar agora</a>
     </div>
-    <h2 class="categoria" id="avaliacoes">Depoimentos</h2>
-    <p>"Achei os produtos incríveis e o atendimento do Igor é top!" – Cliente satisfeito</p>
-    <p>"Comprei via o site do Iguin e chegou tudo certinho." – Comprador anônimo</p>
+    
+    <div class="produto">
+      <img src="imagens/jbl_boombox.webp" alt="Caixa de Som JBL Boombox 3">
+      <h2>Caixa de Som JBL Boombox 3</h2>
+      <p>Produto de alta qualidade, ideal para quem busca desempenho e custo-benefício.</p>
+      <p class="preco">Preço especial via afiliado</p>
+      <a class="botao-compra" href="https://mercadolivre.com/sec/2oFTkzS" target="_blank">Comprar agora</a>
+    </div>
+    
+    <div class="produto">
+      <img src="imagens/led_rgb.webp" alt="Fita de LED RGB que muda de cor">
+      <h2>Fita de LED RGB que muda de cor</h2>
+      <p>Produto de alta qualidade, ideal para quem busca desempenho e custo-benefício.</p>
+      <p class="preco">Preço especial via afiliado</p>
+      <a class="botao-compra" href="https://mercadolivre.com/sec/2u7pNoZ" target="_blank">Comprar agora</a>
+    </div>
+    
+    <div class="produto">
+      <img src="imagens/painel_led.webp" alt="Painel LED RGB com controle">
+      <h2>Painel LED RGB com controle</h2>
+      <p>Produto de alta qualidade, ideal para quem busca desempenho e custo-benefício.</p>
+      <p class="preco">Preço especial via afiliado</p>
+      <a class="botao-compra" href="https://mercadolivre.com/sec/1gXJ6ha" target="_blank">Comprar agora</a>
+    </div>
+    
+    <div class="produto">
+      <img src="imagens/projetor_wifi.webp" alt="Projetor Full Wi-Fi 6 4K Android 13">
+      <h2>Projetor Full Wi-Fi 6 4K Android 13</h2>
+      <p>Produto de alta qualidade, ideal para quem busca desempenho e custo-benefício.</p>
+      <p class="preco">Preço especial via afiliado</p>
+      <a class="botao-compra" href="https://mercadolivre.com/sec/225dMWK" target="_blank">Comprar agora</a>
+    </div>
+    
+    <div class="produto">
+      <img src="imagens/bahrein_hy320.webp" alt="Projetor Bahrein HY320 Mini">
+      <h2>Projetor Bahrein HY320 Mini</h2>
+      <p>Produto de alta qualidade, ideal para quem busca desempenho e custo-benefício.</p>
+      <p class="preco">Preço especial via afiliado</p>
+      <a class="botao-compra" href="https://mercadolivre.com/sec/2UdHhrS" target="_blank">Comprar agora</a>
+    </div>
+    
+    <div class="produto">
+      <img src="imagens/mini_projetor_4k.webp" alt="Mini Projetor Portátil 4K">
+      <h2>Mini Projetor Portátil 4K</h2>
+      <p>Produto de alta qualidade, ideal para quem busca desempenho e custo-benefício.</p>
+      <p class="preco">Preço especial via afiliado</p>
+      <a class="botao-compra" href="https://mercadolivre.com/sec/1W9k8NK" target="_blank">Comprar agora</a>
+    </div>
+    
+    <div class="produto">
+      <img src="imagens/notebook_samsung.webp" alt="Notebook Samsung Galaxy Book">
+      <h2>Notebook Samsung Galaxy Book</h2>
+      <p>Produto de alta qualidade, ideal para quem busca desempenho e custo-benefício.</p>
+      <p class="preco">Preço especial via afiliado</p>
+      <a class="botao-compra" href="https://mercadolivre.com/sec/1eGtDiD" target="_blank">Comprar agora</a>
+    </div>
+    
   </main>
   <footer>
     <p>Loja do Iguin - Criado por Igor Nunes, focado em trazer os melhores produtos com qualidade e bom preço.</p>
     <p>Contato: WhatsApp (62) 98275-5373 | Email: igor.nunes@gmail.com</p>
     <p>Siga: @loja_do_iguin</p>
   </footer>
+  <button id="chat-toggle" onclick="toggleChat()">💬</button>
   <div id="chat-container">
     <div id="chat-messages"></div>
     <div id="chat-input">
@@ -67,6 +127,11 @@
     </div>
   </div>
   <script>
+    function toggleChat() {
+      const chat = document.getElementById('chat-container');
+      chat.style.display = chat.style.display === 'none' ? 'block' : 'none';
+    }
+
     async function sendMessage() {
       const input = document.getElementById('user-input');
       const message = input.value;
