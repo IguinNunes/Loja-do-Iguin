@@ -1,166 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Loja do Iguin</title>
+  <meta name="description" content="Produtos afiliados do Mercado Livre com qualidade, recomendações e atendimento em tempo real por chatbot. Conheça os achadinhos do Igor Nunes!" />
+  <meta name="keywords" content="Mercado Livre, afiliado, produtos, eletrônicos, ofertas, Loja do Iguin" />
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f2f2f2; }
-    header { background-color: #333; color: white; padding: 1rem; text-align: center; }
+    body { font-family: Arial, sans-serif; margin: 0; background-color: #f5f5f5; }
+    header { background: #ffe600; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    header h1 { margin: 0; color: #333; }
+    nav a { margin: 0.5rem; color: #333; text-decoration: none; font-weight: bold; }
     main { padding: 2rem; }
-    .produto {
-      background: white;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .produto img { width: 100%; border-radius: 8px; margin-bottom: 0.5rem; }
-    .produto a {
-      background: #007BFF;
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-    }
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-    #chat-container {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 300px;
-      height: 400px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      font-size: 14px;
-    }
-    #chat-messages { flex: 1; padding: 10px; overflow-y: auto; }
-    #chat-input {
-      display: flex;
-      border-top: 1px solid #ccc;
-    }
-    #chat-input input {
-      flex: 1;
-      border: none;
-      padding: 10px;
-      font-size: 14px;
-    }
-    #chat-input button {
-      border: none;
-      padding: 10px 15px;
-      background: #007BFF;
-      color: white;
+    .categoria { font-size: 1.2rem; margin: 1.5rem 0 1rem; color: #333; }
+    .produto { background: white; border-radius: 8px; padding: 1rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .produto img { width: 100%; border-radius: 8px; }
+    .produto h2 { font-size: 1.2rem; color: #222; }
+    .produto p { color: #555; }
+    .preco { font-size: 1.2rem; color: green; margin: 0.5rem 0; }
+    .botao-compra { background: #3483fa; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block; }
+    footer { background: #333; color: white; padding: 2rem; text-align: center; }
+    #chat-container { position: fixed; bottom: 20px; right: 20px; width: 300px; background: white; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+    #chat-messages { max-height: 200px; overflow-y: auto; padding: 10px; }
+    #chat-input { display: flex; border-top: 1px solid #ddd; }
+    #chat-input input { flex: 1; border: none; padding: 10px; }
+    #chat-input button { background: #3483fa; border: none; color: white; padding: 10px 15px; }
+    @media (max-width: 600px) {
+      .produto { padding: 1rem 0.5rem; }
+      header, footer { text-align: center; flex-direction: column; }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Loja do Iguin</h1>
-    <p>Achadinhos e eletrônicos com preço top!</p>
+    <nav>
+      <a href="#eletronicos">Eletrônicos</a>
+      <a href="#iluminacao">Iluminação</a>
+      <a href="#projetores">Projetores</a>
+      <a href="#notebooks">Notebooks</a>
+    </nav>
   </header>
-
   <main>
-    
+    <h2 class="categoria" id="eletronicos">Eletrônicos</h2>
     <div class="produto">
-      <h2>Monitor Gamer Samsung 24” Full HD</h2>
-      <img src="imagens/monitor_samsung.webp" alt="Monitor Gamer Samsung 24” Full HD">
-      <a href="https://mercadolivre.com/sec/2Y6isgE" target="_blank">Ver no Mercado Livre</a>
-    </div>
-    
-    <div class="produto">
+      <img src="imagens/headset_anc.webp" alt="Headset Bluetooth">
       <h2>Headset Bluetooth com ANC</h2>
-      <img src="imagens/headset_anc.webp" alt="Headset Bluetooth com ANC">
-      <a href="https://mercadolivre.com/sec/1bEUvw1" target="_blank">Ver no Mercado Livre</a>
+      <p>Som imersivo e cancelamento de ruído para seu conforto.</p>
+      <p class="preco">R$ 199,90</p>
+      <a class="botao-compra" href="https://mercadolivre.com/sec/1bEUvw1" target="_blank">Comprar agora</a>
     </div>
-    
-    <div class="produto">
-      <h2>Caixa de Som JBL Boombox 3</h2>
-      <img src="imagens/jbl_boombox.webp" alt="Caixa de Som JBL Boombox 3">
-      <a href="https://mercadolivre.com/sec/2oFTkzS" target="_blank">Ver no Mercado Livre</a>
-    </div>
-    
-    <div class="produto">
-      <h2>Fita de LED RGB que muda de cor</h2>
-      <img src="imagens/led_rgb.webp" alt="Fita de LED RGB que muda de cor">
-      <a href="https://mercadolivre.com/sec/2u7pNoZ" target="_blank">Ver no Mercado Livre</a>
-    </div>
-    
-    <div class="produto">
-      <h2>Painel LED RGB com controle</h2>
-      <img src="imagens/painel_led.webp" alt="Painel LED RGB com controle">
-      <a href="https://mercadolivre.com/sec/1gXJ6ha" target="_blank">Ver no Mercado Livre</a>
-    </div>
-    
-    <div class="produto">
-      <h2>Projetor Full Wi-Fi 6 4K Android 13</h2>
-      <img src="imagens/projetor_wifi.webp" alt="Projetor Full Wi-Fi 6 4K Android 13">
-      <a href="https://mercadolivre.com/sec/225dMWK" target="_blank">Ver no Mercado Livre</a>
-    </div>
-    
-    <div class="produto">
-      <h2>Projetor Bahrein HY320 Mini</h2>
-      <img src="imagens/bahrein_hy320.webp" alt="Projetor Bahrein HY320 Mini">
-      <a href="https://mercadolivre.com/sec/2UdHhrS" target="_blank">Ver no Mercado Livre</a>
-    </div>
-    
-    <div class="produto">
-      <h2>Mini Projetor Portátil 4K</h2>
-      <img src="imagens/mini_projetor_4k.webp" alt="Mini Projetor Portátil 4K">
-      <a href="https://mercadolivre.com/sec/1W9k8NK" target="_blank">Ver no Mercado Livre</a>
-    </div>
-    
-    <div class="produto">
-      <h2>Notebook Samsung Galaxy Book</h2>
-      <img src="imagens/notebook_samsung.webp" alt="Notebook Samsung Galaxy Book">
-      <a href="https://mercadolivre.com/sec/1eGtDiD" target="_blank">Ver no Mercado Livre</a>
-    </div>
-    
+    <h2 class="categoria" id="avaliacoes">Depoimentos</h2>
+    <p>"Achei os produtos incríveis e o atendimento do Igor é top!" – Cliente satisfeito</p>
+    <p>"Comprei via o site do Iguin e chegou tudo certinho." – Comprador anônimo</p>
   </main>
-
   <footer>
-    <p>Contato: (62) 98275-5373 | Instagram: @loja_do_iguin</p>
+    <p>Loja do Iguin - Criado por Igor Nunes, focado em trazer os melhores produtos com qualidade e bom preço.</p>
+    <p>Contato: WhatsApp (62) 98275-5373 | Email: igor.nunes@gmail.com</p>
+    <p>Siga: @loja_do_iguin</p>
   </footer>
-
   <div id="chat-container">
     <div id="chat-messages"></div>
     <div id="chat-input">
-      <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+      <input type="text" id="user-input" placeholder="Pergunte algo...">
       <button onclick="sendMessage()">Enviar</button>
     </div>
   </div>
-
   <script>
     async function sendMessage() {
       const input = document.getElementById('user-input');
-      const userMessage = input.value;
-      if (!userMessage) return;
-
+      const message = input.value;
+      if (!message) return;
       const chat = document.getElementById('chat-messages');
-      chat.innerHTML += `<div><strong>Você:</strong> ${userMessage}</div>`;
+      chat.innerHTML += `<div><strong>Você:</strong> ${message}</div>`;
       input.value = '';
-
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer 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"
+          "Authorization": "Bearer SUA_CHAVE_API"
         },
         body: JSON.stringify({
           model: "gpt-3.5-turbo",
-          messages: [{ role: "user", content: userMessage }]
+          messages: [{ role: "user", content: message }]
         })
       });
-
       const data = await response.json();
       const reply = data.choices[0].message.content;
       chat.innerHTML += `<div><strong>IguinBot:</strong> ${reply}</div>`;
